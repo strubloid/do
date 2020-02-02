@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 PROJECT_NAME="DO (anything on linux)"
 
@@ -14,6 +14,7 @@ BINARY_FILE="$BINARY_FOLDER/doo"
 
 
 ## Colors
+MENU_RESTART_COLOR="\e[0m";
 COLOR_RED='\e[1;31m%s\e[0m\n'
 COLOR_GREEN='\e[1;32m%s\e[0m\n'
 COLOR_YELLOW='\e[1;33m%s\e[0m\n'

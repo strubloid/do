@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
+ROOT_FOLDER="$(dirname "$(readlink -f "$0")")"
+
 ## loading all variables
-source vendor/variables.sh
+source "$ROOT_FOLDER/vendor/variables.sh"
 
 ## loading utils package
-source vendor/utils.sh
-
-## loading the bootstrap for this project
-source vendor/bootstrap.sh
+source "$ROOT_FOLDER/vendor/utils.sh"
 
 ## loading sudor action
 requiredSudoUser;
@@ -15,6 +14,6 @@ requiredSudoUser;
 ## checking if exists the binary
 checkBinaryExists;
 
-printf "foi\n"
+printf "Finished\n"
 
 

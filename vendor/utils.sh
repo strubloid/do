@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
+ROOT_FOLDER="$(dirname "$(readlink -f "$0")")"
 
 ## loading all variables
-source vendor/variables.sh
+source "$ROOT_FOLDER/vendor/variables.sh"
 
 ## Method that will check if you are a sudor user or not
 areYouSudoUser()
@@ -69,9 +70,9 @@ checkBinaryExists()
 
     printf "[1]: Check for the $BINARY_FILE\n";
 
-    WHEREIS=$(whereis do)
+    WHEREIS=$(whereis doo)
 
-    if [ "$WHEREIS" == "do:" ]; then
+    if [ "$WHEREIS" == "doo:" ]; then
 
         printf "[1]\t[Missing]: missing do file, so we will be generating a new one on $BINARY_FILE\n"
         printf "[1]\t[Action]: Creating Soft Link: $BINARY_SOURCE $BINARY_FILE"
